@@ -1,0 +1,77 @@
+.home-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        background-color: #1E1E1E;
+
+        img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #ffffff;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .logo-name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0 0 10px;
+        }
+
+        .cta-button {
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: #333333;
+            border-radius: 30px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #f1f1f1;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+// Responsive Design Adjustments
+@media (max-width: 1024px) {
+    .home-container {
+        grid-template-columns: 1fr; // Make it a single-column layout
+        height: auto;
+    }
+
+    .left-container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-container {
+        .logo-name {
+            font-size: 1.5rem; // Reduce size for small screens
+        }
+
+        .cta-button {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+    }
+}

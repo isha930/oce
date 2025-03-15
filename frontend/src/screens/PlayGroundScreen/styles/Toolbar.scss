@@ -1,0 +1,108 @@
+.toolbar {
+  background-color: #2b2b2b;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #444;
+
+  .file-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+
+    input {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background: transparent;
+      border: none;
+      outline: none;
+      width: auto;
+    }
+
+    .edit-icon {
+      margin-left: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  }
+
+  .save-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+
+  .save-btn:hover {
+    background-color: #0056b3;
+  }
+
+  select {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  /* remove this class */
+  //   .popup {
+  //     position: fixed;
+  //     bottom: 20px;
+  //     right: 20px;
+  //     background-color: #4caf50;
+  //     color: white;
+  //     padding: 10px 15px;
+  //     border-radius: 5px;
+  //     font-weight: bold;
+  //     animation: fadeInOut 2s ease-in-out;
+  //   }
+
+  //   @keyframes fadeInOut {
+  //     0% { opacity: 0; transform: translateY(10px); }
+  //     10% { opacity: 1; transform: translateY(0); }
+  //     90% { opacity: 1; transform: translateY(0); }
+  //     100% { opacity: 0; transform: translateY(10px); }
+  //   }
+  /* ... Your other styles ... */
+
+  .code-saved-popup {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 100; /* Ensure it's on top */
+    opacity: 0.9;
+    animation: fadeInOut 2s ease-in-out;
+  }
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -10px);
+    }
+    10% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    90% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -10px);
+    }
+  }
+}

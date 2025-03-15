@@ -1,0 +1,29 @@
+.playground-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .playground-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; // Editor takes 2/3 space, Input/Output 1/3
+    gap: 10px;
+    padding: 10px;
+    flex-grow: 1; // Takes remaining space
+  }
+  
+  .input-output-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-container {
+    border-top: 1px solid #ddd;
+    background: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

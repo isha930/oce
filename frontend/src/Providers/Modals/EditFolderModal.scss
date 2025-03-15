@@ -1,0 +1,15 @@
+.edit-folder-input {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 60%;
+    background: #f9f9f9;
+    outline: none;
+  }
+  
+  .edit-folder-input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 4px rgba(108, 99, 255, 0.5);
+  }
+  
