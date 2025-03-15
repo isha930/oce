@@ -39,17 +39,33 @@ select {
   border: 1px solid #444;
   border-radius: 8px;
   font-size: 1rem;
-  background: #222;
-  color: white;
+  background: #222 !important;
+  color: white !important; /* Ensures text remains visible */
   transition: 0.3s ease-in-out;
+
+  &::placeholder {
+    color: #bbb; /* Lighter text for placeholders */
+  }
+
+  /* Fixes issue with autofill turning text invisible */
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
+    -webkit-text-fill-color: white !important;
+  }
 }
 
+/* Ensures text stays visible when typing */
 input:focus,
 select:focus {
   border-color: #6c63ff;
   box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+  color: white !important;
 }
 
+/* Button Styling */
 .p-button {
   width: 100%;
   padding: 14px;
@@ -68,6 +84,7 @@ select:focus {
   background: linear-gradient(90deg, #4a4ae1, #3a3abf);
 }
 
+/* Fade-in Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;

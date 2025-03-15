@@ -96,8 +96,7 @@ function Toolbar() {
 
   return (
     <div className="toolbar">
-      {/* ✅ Code saved popup */}
-      {showCodeSaved && <div className="code-saved-popup">Code Saved!</div>}
+      {/* ✅ File Name (Left) */}
       <div className="file-name">
         {isEditing ? (
           <input
@@ -110,34 +109,27 @@ function Toolbar() {
           />
         ) : (
           <span onClick={() => setIsEditing(true)}>
-            {fileName || "Untitled File"} {/* ✅ Display filename from context */}
+            {fileName || "Untitled File"}
           </span>
         )}
         <FaEdit className="edit-icon" onClick={() => setIsEditing(true)} />
       </div>
 
-      {/* ✅ Save code button */}
+      {/* ✅ Save Code (Centered) */}
       <button className="save-btn" onClick={handleSaveCode}>
         Save Code
       </button>
-      {/* ✅ Language selection */}
-     
 
-      {/* ✅ Theme selection */}
-      <select
-        className="theme-select"
-        onChange={handleThemeChange}
-        value={
-          themes.find((theme) => theme.value === activeTheme)?.name ||
-          "GitHub Dark"
-        } // Set the default value to "GitHub Dark" if not found
-      >
-        {themes.map((theme) => (
-          <option key={theme.name} value={theme.name}>
-            {theme.name}
-          </option>
-        ))}
-      </select>
+      {/* ✅ Theme Dropdown (Right Corner) */}
+      <div className="dropdown-container">
+        <select className="theme-select" onChange={handleThemeChange} value={activeTheme}>
+          {themes.map((theme) => (
+            <option key={theme.name} value={theme.name}>
+              {theme.name}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
