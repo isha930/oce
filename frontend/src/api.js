@@ -2,7 +2,7 @@ export const executeCode = async (languageId, sourceCode, input) => {
   try {
     console.log("Executing Code with:", { languageId, sourceCode, input }); // ✅ Debugging
 
-    const response = await fetch("https://onlinecodeeditor-a1dp.onrender.com/api/run", {
+    const response = await fetch("https://oce.onrender.com/api/run", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
